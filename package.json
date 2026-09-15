@@ -1,0 +1,14 @@
+{
+  "name": "voice",
+  "private": true,
+  "description": "Telegram voice -> text pipeline (OpenRouter whisper-large-v3 + glm-5.3-flash)",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "split": "NODE_USE_ENV_PROXY=1 node ogg_split.js",
+    "txt": "NODE_USE_ENV_PROXY=1 node ogg2txt.js",
+    "summary": "NODE_USE_ENV_PROXY=1 node ogg_summary.js",
+    "pipeline": "NODE_USE_ENV_PROXY=1 node ogg_pipeline.js"
+  }
+}
